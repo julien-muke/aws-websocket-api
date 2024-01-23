@@ -7,7 +7,7 @@ In today's video we will discuss about websocket APIs web circuit apis support t
 
 ## 	📝 Hands-on Overview
 
-The sample use case that we are going to see today is a real-time char application there are few components:
+The sample use case that we are going to see today is a real-time chat application with few components:
 
 * First is obviously the API gateway service itself which is used to set up the application 
 * And will be connected to three different lambdas to perform three different actions to establish connection to send messages  
@@ -24,8 +24,7 @@ The sample use case that we are going to see today is a real-time char applicati
 ## 📐 Architecture Design
 
 
-![Blank diagram-11](https://github.com/julien-muke/AWS-Control-Tower/assets/110755734/786ed493-5a4d-469d-ba5a-c0047744a0e6)
+![Blank diagram-12](https://github.com/julien-muke/aws-websocket-api/assets/110755734/6fa322ac-40a7-43f9-bfcd-b1d09d5a3cf8)
 
 
 
-## ➡️ Set up a Landing Zone
