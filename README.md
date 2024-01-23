@@ -3,26 +3,20 @@
 
 ## 🤖 Introduction
 
-In this AWS tutorial, you'll learn about AWS Control Tower and how you can use it to manage and govern many AWS accounts. You'll also have an opportunity to follow along as we show you how to create a Landing Zone using AWS Control Tower.
+In today's video we will discuss about websocket APIs web circuit apis support two-way communication that is both the users and the back-end can send messages back and forth once connected so it's used in real-time applications like charts broadcast messages or real-time dashboards you can create websocket apis in aws using aws api gateway service.
 
-## 📝  AWS Control Tower Overview
+## 	📝 Hands-on Overview
 
-👉  Control Tower creates a well-architected, multi-account baseline based on AWS best  practices
+The sample use case that we are going to see today is a real-time char application there are few components:
 
-👉  And that's known as a landing zone 
+* First is obviously the API gateway service itself which is used to set up the application 
+* And will be connected to three different lambdas to perform three different actions to establish connection to send messages * * * Finally to disconnect then we have a dynamodb table which keeps track of all the current connections.
 
-👉 Guardrails are used for governance and compliance:
+## 🚨 AWS Services Used
 
- * **Preventive guardrails**: Those are based on service control policies (SCPs), and they're  there to disallow API actions
-
-* **Detective guardrails**: Those are implemented  using AWS Config rules and Lambda functions,  
-and they're there to monitor and govern compliance  within the landing zone.
-
-👉 The root user in the management  account can perform actions that guardrails  
-would disallow.  This is the same concept as  with AWS Organizations, where the SCPs cannot  
-affect the root user in the management account. 
-
-In this tutorial, I'm going to show you the process Setting up a Landing Zone using AWS Control Tower for setting up a landing zone using AWS  Control Tower.
+* Amazon API Gateway
+* AWS Lambda
+* Amazon DynamoDB
 
 
 
