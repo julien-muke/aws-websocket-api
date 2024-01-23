@@ -10,7 +10,8 @@ In today's video we will discuss about websocket APIs web circuit apis support t
 The sample use case that we are going to see today is a real-time char application there are few components:
 
 * First is obviously the API gateway service itself which is used to set up the application 
-* And will be connected to three different lambdas to perform three different actions to establish connection to send messages * * * Finally to disconnect then we have a dynamodb table which keeps track of all the current connections.
+* And will be connected to three different lambdas to perform three different actions to establish connection to send messages  
+* Finally to disconnect then we have a dynamodb table which keeps track of all the current connections.
 
 ## 🚨 AWS Services Used
 
