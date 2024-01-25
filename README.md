@@ -147,4 +147,14 @@ When whenever you create a lambda function it automatically comes with the defau
 
 
 
+* Review the permissions, specify details, and tags then click "Save changes"
+
+
+![Screenshot 2024-01-25 at 13 57 53](https://github.com/julien-muke/aws-websocket-api/assets/110755734/5464b831-d17c-45e0-b13b-e1146c5897ab)
+
+
+
+👉 We are going to say follow the same steps and create two more Lambda
+
+
 
