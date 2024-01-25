@@ -80,14 +80,14 @@ def lambda_handler(event, context):
 
 * We are going to create an "environment variable" to store the dynamodb table name so this way if you're going to change the table name then you need not touch the code it's just enough to change the environment variable
 
-    - On the top bar click "Configuration" then on the left hand side choose "Environment variables", clikc "Edit", then click "Add Environment variables" 
+    * On the top bar click "Configuration" then on the left hand side choose "Environment variables", clikc "Edit", then click "Add Environment variables" 
 
 
 ![Screenshot 2024-01-25 at 13 48 24](https://github.com/julien-muke/aws-websocket-api/assets/110755734/9999e494-3178-4f9c-9766-2d35c50fa1b9)
 
 
 
-    - The key is going to be named `WEBSOCKET_TABLE` and the values is going to be `websocket-conntections` then click "Save"
+     * The key is going to be named `WEBSOCKET_TABLE` and the values is going to be `websocket-conntections` then click "Save"
 
 
 ![Screenshot 2024-01-25 at 13 49 15](https://github.com/julien-muke/aws-websocket-api/assets/110755734/a26f8c9a-062f-47c0-9951-c4e015639ce6)
