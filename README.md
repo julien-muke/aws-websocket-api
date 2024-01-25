@@ -116,3 +116,9 @@ When whenever you create a lambda function it automatically comes with the defau
 
 ![Screenshot 2024-01-25 at 13 52 19](https://github.com/julien-muke/aws-websocket-api/assets/110755734/842ed99d-b6ab-4aa1-91e9-a402e24d0ada)
 
+
+* Let's Add some permissions click "Add more permissions"
+
+
+![Screenshot 2024-01-25 at 13 53 46](https://github.com/julien-muke/aws-websocket-api/assets/110755734/c72f7f06-a5e6-4189-a7d5-ffae7b862275)
+
