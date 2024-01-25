@@ -74,3 +74,5 @@ def lambda_handler(event, context):
     return {}
 ```
 
+
+![Screenshot 2024-01-25 at 13 47 31](https://github.com/julien-muke/aws-websocket-api/assets/110755734/0729f326-c952-4869-bd12-c702865f1c74)
