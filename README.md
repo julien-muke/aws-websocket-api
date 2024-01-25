@@ -93,5 +93,26 @@ def lambda_handler(event, context):
 ![Screenshot 2024-01-25 at 13 49 15](https://github.com/julien-muke/aws-websocket-api/assets/110755734/a26f8c9a-062f-47c0-9951-c4e015639ce6)
 
 
+We're are going to set up some lambda role permissions in order for it to be able to put item into dynamodb table
 
+* Click on "Configuration" on the left hand side choose "Permissions" then click the Role name link
+
+
+
+![Screenshot 2024-01-25 at 13 49 56](https://github.com/julien-muke/aws-websocket-api/assets/110755734/0f8d1484-116b-4b21-ab31-335de23fc56b)
+
+
+When whenever you create a lambda function it automatically comes with the default rule which allows to add cloudwatch logs
+
+
+* Sroll down to "Permissions Policies" then click the Policy Name
+
+
+![Screenshot 2024-01-25 at 13 50 39](https://github.com/julien-muke/aws-websocket-api/assets/110755734/89e70557-5346-4adf-bed0-5634f7b2cbbc)
+
+
+* Let's edit the Policy click on "Edit"
+
+
+![Screenshot 2024-01-25 at 13 52 19](https://github.com/julien-muke/aws-websocket-api/assets/110755734/842ed99d-b6ab-4aa1-91e9-a402e24d0ada)
 
