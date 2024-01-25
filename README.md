@@ -123,4 +123,17 @@ When whenever you create a lambda function it automatically comes with the defau
 ![Screenshot 2024-01-25 at 13 53 46](https://github.com/julien-muke/aws-websocket-api/assets/110755734/c72f7f06-a5e6-4189-a7d5-ffae7b862275)
 
 
+* Select service as "DynamoDB" permission
+
+
+![Screenshot 2024-01-25 at 13 54 05](https://github.com/julien-muke/aws-websocket-api/assets/110755734/68534748-4ef4-44c7-8478-0c5185b6266f)
+
+
+*  Select actoins as "Putitem"
+*  As resources select "Specific"
+*  "Add ARNs" to restric access
+
+
+![Screenshot 2024-01-25 at 13 55 22](https://github.com/julien-muke/aws-websocket-api/assets/110755734/333aeec8-8cfc-444f-b6b9-21e76e8d0d5e)
+
 
