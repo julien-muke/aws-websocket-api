@@ -154,7 +154,7 @@ When whenever you create a lambda function it automatically comes with the defau
 
 
 
-👉 We are going to say follow the same steps and create two more Lambda
+👉 We are going to follow the same steps and create two more Lambda
 
 
 
