@@ -53,5 +53,24 @@ We are going to create 3 Lambda Functions
 
 
 
+* Let's copy and paste our code for our websocket connect to the Lambda Function:
 
+
+```python
+import json
+import boto3
+import os
+
+dynamodb = boto3.client('dynamodb')
+
+def lambda_handler(event, context):
+    connectionId = event['requestContext']['connectionId']
+
+    dynamodb.put_item(
+        TableName=os.environ['WEBSOCKET_TABLE'],
+        Item={'connectionId': {'S': connectionId}}
+    )
+
+    return {}
+```
 
