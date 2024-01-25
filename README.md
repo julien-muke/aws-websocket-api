@@ -137,3 +137,14 @@ When whenever you create a lambda function it automatically comes with the defau
 ![Screenshot 2024-01-25 at 13 55 22](https://github.com/julien-muke/aws-websocket-api/assets/110755734/333aeec8-8cfc-444f-b6b9-21e76e8d0d5e)
 
 
+* Enter the specific ARNs:
+    * Enter your resource region mine is `us-east-1`
+    * Enter the resource table name that we created `websocket-connections`
+    * Click on "Add ARNs"
+
+
+![Screenshot 2024-01-25 at 13 56 20](https://github.com/julien-muke/aws-websocket-api/assets/110755734/de9965b7-d541-44a9-b4b2-e42725917c84)
+
+
+
+
