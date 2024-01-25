@@ -87,7 +87,7 @@ def lambda_handler(event, context):
 
 
 
-     * The key is going to be named `WEBSOCKET_TABLE` and the values is going to be `websocket-conntections` then click "Save"
+    * The key is going to be named `WEBSOCKET_TABLE` and the values is going to be `websocket-conntections` then click "Save"
 
 
 ![Screenshot 2024-01-25 at 13 49 15](https://github.com/julien-muke/aws-websocket-api/assets/110755734/a26f8c9a-062f-47c0-9951-c4e015639ce6)
