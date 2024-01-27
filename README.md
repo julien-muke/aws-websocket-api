@@ -154,7 +154,7 @@ When whenever you create a lambda function it automatically comes with the defau
 
 
 
-NOTE: We are going to follow the same steps and create two more Lambda
+NOTE: We are going to follow the same steps and create two more Lambda (from step 2)
 
 
 👉  The second Lambda is going to be `websocket-disconnect` this will be invoked whenever there is a disconnection request to the websocket api, we are going select python 3.9 for Runtime
@@ -191,6 +191,35 @@ def lambda_handler(event, context):
 
 
 
+* Repeat the two configuration steps as we did earlier:
+
+1. We are going to create an "Environment variable" to store the DynamoDB table name so this way if you're going to change the table name then you need not touch the code it's just enough to change the environment variable
+
+2. On the top bar click "Configuration" then on the left hand side choose "Environment variables", clikc "Edit", then click "Add Environment variables"
+
+3. The key is going to be named `WEBSOCKET_TABLE` and the values is going to be `websocket-conntections` then click "Save"
+
+We're are going to set up some lambda role permissions in order for it to be able to put item into dynamodb table.
+
+4. Click on "Configuration" on the left hand side choose "Permissions" then click the Role name link
+
+When whenever you create a lambda function it automatically comes with the default rule which allows to add cloudwatch logs
+
+5. Sroll down to "Permissions Policies" then click the Policy Name
+
+6. Let's edit the Policy click on "Edit"
+
+7. Let's Add some permissions click "Add more permissions"
+
+8. Select service as "DynamoDB" permission
+
+* Select actoins as "Deleteitem"
+* As resources select "Specific"
+* "Add ARNs" to restric access
+
+
+
+👉  Moving on to our third and final Lambda so that's going to be the main one which is going to be used to send the messages so we're going to call it as `websocket-send` and again it's going to use python 3.9 ( follow to same step as shown above )
 
 
 
