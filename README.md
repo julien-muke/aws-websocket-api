@@ -371,4 +371,42 @@ either create with a Lambda or a Mock or a Mock API, in our case we are going to
 
 
 
-4. 
+4. As you can see that it's connected successfully
+
+
+![Screenshot 2024-01-25 at 14 38 20](https://github.com/julien-muke/aws-websocket-api/assets/110755734/e344924e-43fb-4a00-a4e4-f5aef0d3dd08)
+
+
+
+5. Repeat the same process and establish two other connections ( create a new websocket, paste the URL and connect)
+
+6. If you go to into DynamoDB you can see there are new different entries, each one represents and one open connection from our postman UI
+
+
+![Screenshot 2024-01-25 at 14 40 50](https://github.com/julien-muke/aws-websocket-api/assets/110755734/c5d8315e-9ed2-47ac-a199-4c1d4fb852a2)
+
+
+
+7. Now what we are going to do is send try sending a message so i'm going to send a message from our first connection, the message body should have something called `action` this is the route name which we mentioned while creating the API Gateway if you remember the action should match the exact route name, in our case it's message and then you have to specify the message itself i'm trying to just send `hello from terminal 1`
+
+
+```python
+    {"action": "sendMessage", "message": "hello from terminal1"}
+```
+
+
+![Screenshot 2024-01-25 at 14 43 00](https://github.com/julien-muke/aws-websocket-api/assets/110755734/15b8162a-7923-46ad-86c4-27dac9750486)
+
+
+
+8. In the logs you can see there is a message being sent 
+
+
+![Screenshot 2024-01-25 at 14 44 12](https://github.com/julien-muke/aws-websocket-api/assets/110755734/4e1117b1-3cf8-4679-b485-5f1c21f350e3)
+
+
+9. And if you go into terminal 2 and 3 you should be seeing those messages being received all right so it works
+
+
+![Screenshot 2024-01-25 at 14 44 27](https://github.com/julien-muke/aws-websocket-api/assets/110755734/5e414f75-e349-4564-b73e-d732e8b318f5)
+
