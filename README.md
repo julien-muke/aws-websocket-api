@@ -219,7 +219,11 @@ When whenever you create a lambda function it automatically comes with the defau
 
 
 
-👉  Moving on to our third and final Lambda so that's going to be the main one which is going to be used to send the messages so we're going to call it as `websocket-send` and again it's going to use python 3.9 ( follow to same step as shown above )
+![Screenshot 2024-01-25 at 14 09 12](https://github.com/julien-muke/aws-websocket-api/assets/110755734/8fa56ab6-9adc-43ab-a4f6-0a710bc5552a)
+
+
+
+👉  Moving on to our third and final Lambda so that's going to be the main one which is going to be used to send the messages so we're going to call it as `websocket-send` and again it's going to use python 3.9 ( follow to same steps as shown above )
 
 
 * Let's quick look at the code, it's going to do a scan of the DynamoDB Table to get all the connection IDs and also going to get the API Gateway Endpoint, these endpoint URLs can be derived from the event message that is being passed into the Lambda by the API gateway and we are going to go through each of the connection and post messages to all the connections which are stored in DynamoDB Table, this way we can ensure that all the connection all the action active connections receive the message.
@@ -254,3 +258,31 @@ def lambda_handler(event, context):
 
     return {}
 ```
+
+
+![Screenshot 2024-01-25 at 14 13 35](https://github.com/julien-muke/aws-websocket-api/assets/110755734/3b913c83-9569-4712-ac29-21d86df8809b)
+
+
+1. Let's paste the code to the Lambda code source and deploy 
+
+2.  Under configuration we are going to repeat the same set up the environment variable for DynamoDB Table name
+
+3. Then we're going to update the
+permissions:
+
+* we need 2 different
+permissions
+
+* we need the DynamoDB permission but this time it's going to be a `SCAN`
+* Get to the role and into the policy and choose DynamoDB as the servers and under action it's going to be `SCAN` 
+
+
+* and table it's a specific resource the region of the resource and the table name is going to be our first permission and the second one is going to be specific to the connections
+so this time the service is going to be
+Execute API and we are going to allow
+the action callers manage connections so
+this will allow
+the Lambda to post messages into all the
+connections
+and i'm selecting `ANY` of the API
+Gateways 
