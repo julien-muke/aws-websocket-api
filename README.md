@@ -322,11 +322,53 @@ To create the API Gateway, navigate to the console and search for "API Gateway" 
 *  We are attaching each route to the Lambda which we created so you have various options you can
 either create with a Lambda or a Mock or a Mock API, in our case we are going to do all 3 routes to the 3 different lambdas that we created.
 
+* Then select the Lambda function we've created `websocket-connect` `websocket-disconnect` `websocket-send`
+
 
 ![API-Gateway-Create-WebSocket-API-Step-3 (1)](https://github.com/julien-muke/aws-websocket-api/assets/110755734/819957e4-29bc-48e7-a42c-e5929505dc0e)
 
 
 
+* For stage let's name it `demo`
 
 
- 
+![Screenshot 2024-01-25 at 14 32 46](https://github.com/julien-muke/aws-websocket-api/assets/110755734/86b10f2b-c302-4e7e-a508-c99ec8c614f2)
+
+
+
+* Finally review all the details that is the API name and the route selection in the routes itself and the integrations and finally the stage okay create and deploy.
+
+
+
+## Step 3️⃣ : Let's Test our websocket
+
+
+* Click on "Stage" and copy the websocket URL and open POSTMAN to test it
+
+
+![Screenshot 2024-01-25 at 14 35 09](https://github.com/julien-muke/aws-websocket-api/assets/110755734/13827e30-c22c-42e8-b2d0-a08cd39ba706)
+
+
+
+* I'm using postman, you can either use postman or you can you even use any AWS client that you prefer but in this case copy the URL and head over to postman and connect it
+
+1. Click on "New"
+
+
+![Screenshot 2024-01-25 at 14 36 15](https://github.com/julien-muke/aws-websocket-api/assets/110755734/c66488f0-cdda-428d-98b0-782be8102618)
+
+
+2. Select "Websocket"
+
+
+![Screenshot 2024-01-25 at 14 36 26](https://github.com/julien-muke/aws-websocket-api/assets/110755734/33ac5399-cd99-4200-b131-7bbcb4c5c47e)
+
+
+3. Paste the websocket URL and click "Connect"
+
+
+![Screenshot 2024-01-25 at 14 37 39](https://github.com/julien-muke/aws-websocket-api/assets/110755734/67a2d40b-48cc-4b26-a224-00727e4fba03)
+
+
+
+4. 
