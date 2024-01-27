@@ -154,7 +154,43 @@ When whenever you create a lambda function it automatically comes with the defau
 
 
 
-👉 We are going to follow the same steps and create two more Lambda
+NOTE: We are going to follow the same steps and create two more Lambda
+
+
+👉  The second Lambda is going to be `websocket-disconnect` this will be invoked whenever there is a disconnection request to the websocket api, we are going select python 3.9 for Runtime
+
+
+![Create-function-Lambda (9)](https://github.com/julien-muke/aws-websocket-api/assets/110755734/b45414d0-b904-4340-ab72-cba11a137718)
+
+
+* The code for this particular Lambda is going to invoke DynamoDB again but it's a delete item, we are going to delete the connection ID that's being disconnected
+
+
+```python
+import json
+import boto3
+import os
+
+dynamodb = boto3.client('dynamodb')
+
+def lambda_handler(event, context):
+    connectionId = event['requestContext']['connectionId']
+
+    dynamodb.delete_item(
+        TableName=os.environ['WEBSOCKET_TABLE'],
+        Key={'connectionId': {'S': connectionId}}
+    )
+
+    return {}
+```
+
+* Let's paste it into the Lambda code source and deploy
+
+
+![Screenshot 2024-01-25 at 14 00 24](https://github.com/julien-muke/aws-websocket-api/assets/110755734/c1adfc1c-5983-4816-b006-8be9cda51be7)
+
+
+
 
 
 
