@@ -259,30 +259,29 @@ def lambda_handler(event, context):
     return {}
 ```
 
+* Let's paste the code to the Lambda code source and deploy 
+
 
 ![Screenshot 2024-01-25 at 14 13 35](https://github.com/julien-muke/aws-websocket-api/assets/110755734/3b913c83-9569-4712-ac29-21d86df8809b)
 
 
-1. Let's paste the code to the Lambda code source and deploy 
 
-2.  Under configuration we are going to repeat the same set up the environment variable for DynamoDB Table name
+* Under configuration we are going to repeat the same set up the environment variable for DynamoDB Table name
 
-3. Then we're going to update the
-permissions:
+* Then we're going to update the permissions, We need 2 different permissions:
 
-* we need 2 different
-permissions
+* We need the DynamoDB permission but this time it's going to be a `SCAN`, get to the role and into the policy and choose DynamoDB as the servers and under action it's going to be `SCAN` 
 
-* we need the DynamoDB permission but this time it's going to be a `SCAN`
-* Get to the role and into the policy and choose DynamoDB as the servers and under action it's going to be `SCAN` 
+* And table it's a specific resource the region of the resource and the table name is going to be our first permission
 
 
-* and table it's a specific resource the region of the resource and the table name is going to be our first permission and the second one is going to be specific to the connections
-so this time the service is going to be
-Execute API and we are going to allow
-the action callers manage connections so
-this will allow
-the Lambda to post messages into all the
-connections
-and i'm selecting `ANY` of the API
-Gateways 
+![Screenshot 2024-01-25 at 14 20 18](https://github.com/julien-muke/aws-websocket-api/assets/110755734/e3abc613-8955-4741-8131-e73a66b85200)
+
+
+
+* Second one is going to be specific to the connections this time the service is going to be `ExecuteAPI` and we are going to allow the action callers `Manageconnections` so this will allow the Lambda to post messages into all the connections and i'm selecting `ANY` of the API Gateways
+
+
+![Edit-policy-IAM-Global (6)](https://github.com/julien-muke/aws-websocket-api/assets/110755734/c8d40ef0-7d14-46de-9914-be600befb9dc)
+
+
