@@ -222,4 +222,35 @@ When whenever you create a lambda function it automatically comes with the defau
 👉  Moving on to our third and final Lambda so that's going to be the main one which is going to be used to send the messages so we're going to call it as `websocket-send` and again it's going to use python 3.9 ( follow to same step as shown above )
 
 
+* Let's quick look at the code, it's going to do a scan of the DynamoDB Table to get all the connection IDs and also going to get the API Gateway Endpoint, these endpoint URLs can be derived from the event message that is being passed into the Lambda by the API gateway and we are going to go through each of the connection and post messages to all the connections which are stored in DynamoDB Table, this way we can ensure that all the connection all the action active connections receive the message.
 
+
+```python
+import json
+import boto3
+import os
+
+dynamodb = boto3.client('dynamodb')
+
+
+def lambda_handler(event, context):
+    message = json.loads(event['body'])['message']
+    paginator = dynamodb.get_paginator('scan')
+    connectionIds = []
+
+    apigatewaymanagementapi = boto3.client(
+        'apigatewaymanagementapi', 
+        endpoint_url = "https://" + event["requestContext"]["domainName"] + "/" + event["requestContext"]["stage"]
+    )
+
+    for page in paginator.paginate(TableName=os.environ['WEBSOCKET_TABLE']):
+        connectionIds.extend(page['Items'])
+
+    for connectionId in connectionIds:
+        apigatewaymanagementapi.post_to_connection(
+            Data=message,
+            ConnectionId=connectionId['connectionId']['S']
+        )
+
+    return {}
+```
