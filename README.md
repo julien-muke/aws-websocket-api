@@ -285,3 +285,26 @@ def lambda_handler(event, context):
 ![Edit-policy-IAM-Global (6)](https://github.com/julien-muke/aws-websocket-api/assets/110755734/c8d40ef0-7d14-46de-9914-be600befb9dc)
 
 
+👏 All right so we have all the three lambdas. Perfect!!
+
+
+
+## Step 3️⃣ : Creating the API Gateway
+
+
+To create the API Gateway, navigate to the console and search for "API Gateway" choose "Websocket API" then click "Build"
+
+
+![Screenshot 2024-01-25 at 14 27 08](https://github.com/julien-muke/aws-websocket-api/assets/110755734/5ce2f320-9c2e-4744-b5d8-2c9e2ebcfb92)
+
+
+
+* We are going to name it `websocket-api`
+
+* And then a route selection expression as `request.body.action` this is how your api will know which route to redirect your request to
+
+
+
+![Screenshot 2024-01-25 at 14 28 12](https://github.com/julien-muke/aws-websocket-api/assets/110755734/3a8e97c2-ee9d-496f-87b2-5658ff4401d5)
+
+
