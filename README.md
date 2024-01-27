@@ -308,3 +308,25 @@ To create the API Gateway, navigate to the console and search for "API Gateway" 
 ![Screenshot 2024-01-25 at 14 28 12](https://github.com/julien-muke/aws-websocket-api/assets/110755734/3a8e97c2-ee9d-496f-87b2-5658ff4401d5)
 
 
+
+* You have to mention the route name within the action, we are going to define 3 different routes:
+-  1 for connection
+-  1 for disconnection
+-  1 for sending the message (send message is going to be a custom route)
+
+
+![API-Gateway-Create-WebSocket-API-Step-2 (1)](https://github.com/julien-muke/aws-websocket-api/assets/110755734/6689c087-8701-42db-8545-c2537daef927)
+
+
+
+*  We are attaching each route to the Lambda which we created so you have various options you can
+either create with a Lambda or a Mock or a Mock API, in our case we are going to do all 3 routes to the 3 different lambdas that we created.
+
+
+![API-Gateway-Create-WebSocket-API-Step-3 (1)](https://github.com/julien-muke/aws-websocket-api/assets/110755734/819957e4-29bc-48e7-a42c-e5929505dc0e)
+
+
+
+
+
+ 
