@@ -412,7 +412,9 @@ either create with a Lambda or a Mock or a Mock API, in our case we are going to
 
 
 
-## 🏆  It works so you can do the same from a different terminal as well because they are all interconnected so you can send a message from terminal 2 and that will be received by terminal 1 and 3.
+## 🏆  It works 
+
+You can do the same from a different terminal as well because they are all interconnected, you can send a message from terminal 2 and that will be received by terminal 1 and 3.
 
 
 ## 💰 Cost
