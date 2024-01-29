@@ -410,3 +410,8 @@ either create with a Lambda or a Mock or a Mock API, in our case we are going to
 
 ![Screenshot 2024-01-25 at 14 44 27](https://github.com/julien-muke/aws-websocket-api/assets/110755734/5e414f75-e349-4564-b73e-d732e8b318f5)
 
+
+
+## 💰 Cost
+
+All services used are eligible for the AWS Free Tier. However, charges will incur at some point so it's recommended that you shut down resources after completing this tutorial.
