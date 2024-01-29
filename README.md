@@ -3,7 +3,7 @@
 
 ## 🤖 Introduction
 
-In today's video we will discuss about websocket APIs web circuit apis support two-way communication that is both the users and the back-end can send messages back and forth once connected so it's used in real-time applications like charts broadcast messages or real-time dashboards you can create websocket apis in aws using aws api gateway service.
+In this tutorial we will discuss about websocket APIs web circuit APIs support two-way communication that is both the users and the back-end can send messages back and forth once connected so it's used in real-time applications like charts broadcast messages or real-time dashboards you can create websocket APIs in AWS using aws API Gateway Service.
 
 ## 	📝 Hands-on Overview
 
