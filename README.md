@@ -412,6 +412,9 @@ either create with a Lambda or a Mock or a Mock API, in our case we are going to
 
 
 
+## 🏆  It works so you can do the same from a different terminal as well because they are all interconnected so you can send a message from terminal 2 and that will be received by terminal 1 and 3.
+
+
 ## 💰 Cost
 
 All services used are eligible for the AWS Free Tier. However, charges will incur at some point so it's recommended that you shut down resources after completing this tutorial.
